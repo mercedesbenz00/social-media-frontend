@@ -1,0 +1,190 @@
+@function colorsFromHex($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  --text-overlay-color: #{colorsFromHex(#48525f)};
+  --text-white-color: #{colorsFromHex(#fff)};
+
+  --secondary-color: #{colorsFromHex(#424242)};
+  --secondary-text-color: var(--text-white-color);
+  --secondary-overlay-text-color: var(--text-overlay-color);
+  --secondary-active-color: #{colorsFromHex(#3bc38e)};
+  --secondary-dark-color: #{colorsFromHex(#2a7c5c)};
+  --secondary-light-color: #{colorsFromHex(#6ee0b4)};
+
+  --tertiary-color: #{colorsFromHex(#ffca00)};
+  --tertiary-text-color: #{colorsFromHex(#2f3c4a)};
+  --tertiary-overlay-text-color: var(--text-overlay-color);
+  --tertiary-active-color: #{colorsFromHex(#ffca00)};
+  --tertiary-dark-color: #{colorsFromHex(#ffa500)};
+  --tertiary-light-color: #{colorsFromHex(#ffe8b2)};
+
+  --error-color: #{colorsFromHex(#f44336)};
+  --error-text-color: var(--text-white-color);
+  --error-overlay-text-color: var(--text-overlay-color);
+  --error-active-color: #{colorsFromHex(#aa2424)};
+  --error-dark-color: #{colorsFromHex(#b71c1c)};
+  --error-light-color: #{colorsFromHex(#ffcdd2)};
+
+  --warning-color: #{colorsFromHex(#ff9800)};
+  --warning-text-color: var(--text-white-color);
+  --warning-overlay-text-color: var(--text-overlay-color);
+  --warning-active-color: #{colorsFromHex(#e8a704)};
+  --warning-dark-color: #{colorsFromHex(#fb8c00)};
+  --warning-light-color: #{colorsFromHex(#ffb74d)};
+
+  --success-color: #{colorsFromHex(#4caf50)};
+  --success-overlay-text-color: var(--text-overlay-color);
+  --success-text-color: #{colorsFromHex(#224a23)};
+  --success-active-color: #{colorsFromHex(#537f2d)};
+  --success-dark-color: #{colorsFromHex(#388e3c)};
+  --success-light-color: #{colorsFromHex(#c8e6c9)};
+
+  --info-color: #{colorsFromHex(#2196f3)};
+  --info-overlay-text-color: var(--text-overlay-color);
+  --info-text-color: var(--text-white-color);
+  --info-active-color: #{colorsFromHex(#026da7)};
+  --info-dark-color: #{colorsFromHex(#1976d2)};
+  --info-light-color: #{colorsFromHex(#64b5f6)};
+
+  --help-color: #{colorsFromHex(#9c27b0)};
+  --help-overlay-text-color: var(--text-overlay-color);
+  --help-text-color: var(--text-white-color);
+  --help-active-color: #{colorsFromHex(#7d1f8d)};
+  --help-dark-color: #{colorsFromHex(#8c239e)};
+  --help-light-color: #{colorsFromHex(#df9eea)};
+
+  --content-padding: 1rem;
+  --inline-spacing: 0.5rem;
+  --border-radius: 3px;
+  --surface-ground: #{colorsFromHex(#f8f9fa)};
+  --surface-card: #{colorsFromHex(#ffffff)};
+  --surface-overlay: #{colorsFromHex(#ffffff)};
+  --maskbg: rgba(0, 0, 0, 0.4);
+
+  --surface-section: var(--bg-primary-color);
+  --surface-border: var(--bg-primary-dark-color);
+  --surface-hover: var(--bg-primary-dark-color);
+  --surface-highlight: var(--primary-light-color);
+  --surface-checked: var(--primary-dark-color);
+  --surface-focus: #{colorsFromHex(#beccd2)};
+  --surface-secondary: #{colorsFromHex(#607d8b)};
+  --surface-secondary-hover: #{colorsFromHex(#56717d)};
+  --surface-secondary-active: #{colorsFromHex(#4d646f)};
+  --surface-secondary-focus: #{colorsFromHex(#beccd2)};
+
+  --surface-alternate: #{colorsFromHex(#fcfcfc)};
+
+  --surface-check-enabled: #{colorsFromHex(#0d89ec)};
+  --surface-white: #{colorsFromHex(#ffffff)};
+  --surface-select: #{colorsFromHex(#ced4da)};
+
+  --chart-toggler: #{colorsFromHex(#6cbbf5)};
+  --colorpicker-bg: #{colorsFromHex(#323232)};
+  --colorpicker-border: #{colorsFromHex(#191919)};
+
+  --placeholder-primary: #{colorsFromHex(#757575)};
+}
+
+.light-mode {
+  --primary-color: #{colorsFromHex(#352466)};
+  --primary-text-color: var(--text-white-color);
+  --primary-overlay-text-color: var(--text-overlay-color);
+  --primary-active-color: #{colorsFromHex(#000070)};
+  --primary-dark-color: #{colorsFromHex(#1f0f4a)};
+  --primary-light-color: #{colorsFromHex(#713ad2)};
+  --primary-extra-light-color: #{colorsFromHex(#d7c9ff)};
+
+  --text-primary-color: #{colorsFromHex(#48525f)};
+  --text-primary-dark-color: #{colorsFromHex(#2f3c4a)};
+  --text-primary-light-color: #{colorsFromHex(#6c7280)};
+
+  --text-secondary-color: #{colorsFromHex(#ffffff)};
+  --text-secondary-dark-color: #{colorsFromHex(#ffffff)};
+  --text-secondary-light-color: #{colorsFromHex(#757575)};
+
+  --text-blue-light-color: #{colorsFromHex(#231fdb)};
+
+  --bg-primary-color: #{colorsFromHex(#fff)};
+  --bg-primary-dark-color: #{colorsFromHex(#e9ecef)};
+  --bg-primary-light-color: #{colorsFromHex(#fff)};
+
+  --bg-secondary-color: #{colorsFromHex(#ebf0f4)};
+  --bg-secondary-dark-color: #{colorsFromHex(#eff4fb)};
+  --bg-secondary-light-color: #{colorsFromHex(#f8fafc)};
+
+  --bg-gray-color: #{colorsFromHex(#f4f5f7)};
+  --bg-gray-dark-color: #{colorsFromHex(#e2e4ea)};
+  --bg-secondary-gray-color: #{colorsFromHex(#e9eef5)};
+  --bg-purple-light-color: #{colorsFromHex(#D7C9FF80)};
+
+  // this should be removed
+  --bg-red-light-color: #{colorsFromHex(#e10505)};
+  --bg-border-light: #{colorsFromHex(#e0e0e0)};
+
+  --link-color: #{colorsFromHex(#231fdb)};
+  --at-apply: 'defaults';
+}
+
+.dark-mode {
+  --primary-color: #{colorsFromHex(#8c6ddb)};
+  --primary-text-color: #{colorsFromHex(#000000)};
+  --primary-overlay-text-color: var(--text-overlay-color);
+  --primary-active-color: #{colorsFromHex(#d7c9ff)};
+  --primary-dark-color: #{colorsFromHex(#aca0cc)};
+  --primary-light-color: #{colorsFromHex(#e3d9ff)};
+  --primary-extra-light-color: #{colorsFromHex(#efe9ff)};
+
+  --text-primary-color: #{colorsFromHex(#fff)};
+  --text-primary-dark-color: #{colorsFromHex(#f8f9fa)};
+  --text-primary-light-color: #{colorsFromHex(#fcfcfcaa)};
+  --text-secondary-color: #{colorsFromHex(#ffffff)};
+  --text-secondary-dark-color: #{colorsFromHex(#ffffff)};
+  --text-secondary-light-color: #{colorsFromHex(#757575)};
+
+  --bg-primary-color: #{colorsFromHex(#201C2B)};
+  --bg-primary-dark-color: #{colorsFromHex(#272d35)};
+  --bg-primary-light-color: #{colorsFromHex(#0E0C13)};
+
+  --bg-secondary-color: #{colorsFromHex(#ebf0f4)};
+  --bg-secondary-dark-color: #{colorsFromHex(#eff4fb)};
+  --bg-secondary-light-color: #{colorsFromHex(#f8fafc)};
+  --bg-purple-light-color: #{colorsFromHex(#000)};
+  --bg-gray-color: #{colorsFromHex(#f4f5f7)};
+  --bg-gray-dark-color: #{colorsFromHex(#e2e4ea)};
+  --bg-secondary-gray-color: #{colorsFromHex(#e9eef5)};
+
+  --link-color: #{colorsFromHex(#a6d5fa)};
+
+  --content-padding: 1rem;
+  --inline-spacing: 0.5rem;
+  --border-radius: 3px;
+  --surface-ground: #{colorsFromHex(#f8f9fa)};
+  --surface-card: #{colorsFromHex(#ffffff)};
+  --surface-overlay: #{colorsFromHex(#ffffff)};
+  --maskbg: rgba(0, 0, 0, 0.4);
+
+  --surface-section: var(--bg-primary-color);
+  --surface-border: var(--bg-primary-dark-color);
+  --surface-hover: var(--bg-primary-dark-color);
+  --surface-highlight: var(--primary-light-color);
+  --surface-checked: var(--primary-dark-color);
+  --surface-focus: #{colorsFromHex(#beccd2)};
+  --surface-secondary: #{colorsFromHex(#607d8b)};
+  --surface-secondary-hover: #{colorsFromHex(#56717d)};
+  --surface-secondary-active: #{colorsFromHex(#4d646f)};
+  --surface-secondary-focus: #{colorsFromHex(#beccd2)};
+
+  --surface-alternate: #{colorsFromHex(#fcfcfc)};
+
+  --surface-check-enabled: #{colorsFromHex(#0d89ec)};
+  --surface-white: #{colorsFromHex(#ffffff)};
+  --surface-select: #{colorsFromHex(#ced4da)};
+
+  --chart-toggler: #{colorsFromHex(#6cbbf5)};
+  --colorpicker-bg: #{colorsFromHex(#323232)};
+  --colorpicker-border: #{colorsFromHex(#191919)};
+
+  --at-apply: 'defaults';
+}

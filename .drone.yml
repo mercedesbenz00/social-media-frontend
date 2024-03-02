@@ -1,0 +1,145 @@
+kind: secret
+name: aws_secret_access_key
+get:
+  path: drone-cred-secrets
+  name: aws_secret_access_key
+
+---
+kind: secret
+name: aws_access_key_id
+get:
+  path: drone-cred-secrets
+  name: aws_access_key_id
+
+---
+kind: secret
+name: ssh_key
+get:
+  path: drone-ssh-rw-key
+  name: drone-aws-rw-key
+
+---
+kind: secret
+name: argocd-username
+get:
+  path: argocd-credentials
+  name: username
+
+---
+kind: secret
+name: argocd-password
+get:
+  path: argocd-credentials
+  name: password
+
+---
+kind: pipeline
+name: build
+type: kubernetes
+
+trigger:
+  branch:
+    - release/*
+    - drone
+    - develop
+  event:
+    - custom
+    - push
+
+steps:
+  - name: publish-dev
+    image: 310830963532.dkr.ecr.eu-central-1.amazonaws.com/drone-plugin-ecr:1694603248
+    when:
+      branch:
+        - develop
+    settings:
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      registry: 681372973860.dkr.ecr.eu-central-1.amazonaws.com
+      dockerfile: docker/Dockerfile
+      region: eu-central-1
+      repo: user-ui
+      tags:
+        - "app-${DRONE_COMMIT_SHA:0:7}_ci_build_${DRONE_BUILD_NUMBER}"
+  - name: publish-qa
+    image: 310830963532.dkr.ecr.eu-central-1.amazonaws.com/drone-plugin-ecr:1694603248
+    when:
+      branch:
+        - release/*
+    environment:
+      ECR_ACCESS_KEY:
+        from_secret: aws_access_key_id
+      ECR_SECRET_KEY:
+        from_secret: aws_secret_access_key
+    settings:
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      registry: 681372973860.dkr.ecr.eu-central-1.amazonaws.com
+      dockerfile: docker/Dockerfile
+      region: eu-central-1
+      repo: user-ui
+      tags:
+        - "app-${DRONE_COMMIT_SHA:0:7}_ci_build_${DRONE_BUILD_NUMBER}"
+---
+kind: pipeline
+name: "deploy dev"
+type: kubernetes
+depends_on:
+  - "build"
+trigger:
+  branch:
+    - develop
+    - drone
+  event:
+    - promote
+  target:
+    - dev
+clone:
+  disabled: true
+steps:
+  - name: helm-update
+    image: 310830963532.dkr.ecr.eu-central-1.amazonaws.com/drone-pipeline-img:25a4090
+    environment:
+      SSH_KEY:
+        from_secret: ssh_key
+      ARGOCD_USERNAME:
+        from_secret: argocd-username
+      ARGOCD_PASSWORD:
+        from_secret: argocd-password
+      ENV: dev
+      PROJECT: link
+    commands:
+      - ./.drone.sh
+---
+kind: pipeline
+name: "deploy testing (Staging)"
+type: kubernetes
+depends_on:
+  - "build"
+trigger:
+  branch:
+    - release/*
+  event:
+    - promote
+  target:
+    - staging
+clone:
+  disabled: true
+steps:
+  - name: helm-update
+    image: 310830963532.dkr.ecr.eu-central-1.amazonaws.com/drone-pipeline-img:25a4090
+    environment:
+      SSH_KEY:
+        from_secret: ssh_key
+      ARGOCD_USERNAME:
+        from_secret: argocd-username
+      ARGOCD_PASSWORD:
+        from_secret: argocd-password
+      ENV: staging
+      PROJECT: link
+    commands:
+      - ./.drone.sh

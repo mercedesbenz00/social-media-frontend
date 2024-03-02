@@ -1,0 +1,34 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "exclude": ["lib/**/*"],
+  "include": ["src/env.d.ts", "src/**/*"],
+  "compilerOptions": {
+    "allowJs": true,
+    "useUnknownInCatchVariables": false,
+    "moduleResolution": "node",
+    "ignoreDeprecations": "5.0",
+    "noImplicitAny": false,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@@/*": ["./*"]
+    },
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "types": [
+      "vite-plugin-pages/client",
+      "vite/client",
+      "vite-plugin-vue-layouts/client",
+      "@types/lodash",
+      "@types/node",
+      "@types/qs"
+    ]
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.vite-config.json"
+    }
+  ]
+}

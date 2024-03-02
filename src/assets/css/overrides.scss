@@ -1,0 +1,120 @@
+.page-level-tab {
+  .p-tabview-panels {
+    --at-apply: 'p-0'
+  }
+  .p-tabview-nav-content {
+    --at-apply: 'border-bg-purple-light/50 mx-px lg:border-none lg:card-defaults';
+    .p-tabview-nav {
+      --at-apply: 'flex justify-start lg:justify-around border-none gap-x-4 lg:gap-x-0 p-3';
+    }
+
+    .p-tabview-nav-link {
+      --at-apply: '!border-none !px-5 text-xs lg:text-base lg:!px-6 !py-3 !font-light !rounded-2xl';
+    }
+    .p-highlight {
+      .p-tabview-nav-link {
+        --at-apply: '!font-semibold lg:!bg-primary/80 lg:!text-primary-text';
+      }
+    }
+  }
+  .p-tabview-panels {
+    --at-apply: ' px-0';
+  }
+}
+
+.group-dropdown {
+  .p-inputtext {
+    --at-apply: 'h-2rem ';
+  }
+}
+
+[dir='rtl'] {
+  .p-paginator-icon {
+    transform: rotate(180deg);
+  }
+  .i-figma\:arrow-left,
+  .i-figma\:arrow-right {
+    transform: rotate(180deg);
+  }
+  .i-figma\:arrow-left-circle,
+  .i-figma\:arrow-right-circle {
+    transform: rotate(180deg);
+  }
+  .pi-arrow-left {
+    transform: rotate(180deg);
+  }
+  .pi-arrow-right {
+    transform: rotate(180deg);
+  }
+}
+
+.members-tabs {
+  .p-tabview-nav-content {
+    .p-tabview-nav {
+      --at-apply: 'flex space-x-4 border-none p-3';
+    }
+
+    .p-tabview-nav-link {
+      --at-apply: ' !border-none !font-light !px-4 !py-2 !text-xs !rounded-2xl !text-primary';
+    }
+    .p-highlight {
+      .p-tabview-nav-link {
+        --at-apply: '!text-primary !font-semibold !bg-bg-primary-extra-light ';
+      }
+    }
+  }
+  .p-tabview-panels {
+    --at-apply: ' px-0';
+  }
+}
+
+.group-dropdown {
+  .p-inputtext {
+    --at-apply: ' h-2rem ';
+  }
+}
+
+@media (max-width: 575px) {
+  .p-inputtext {
+    --at-apply: 'h-32px text-xs'
+  }
+  .p-dropdown{
+    --at-apply: 'h-32px text-xs'
+  }
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #666 #f1f1f1;
+}
+
+/* For IE, Edge, and Opera */
+*::-ms-scrollbar {
+  width: 8px;
+  height: 8px;
+  z-index: 100;
+}
+
+*::-ms-scrollbar-thumb {
+  background-color: #666;
+  z-index: 100;
+}
+
+*::-ms-scrollbar-track {
+  background-color: transparent;
+  z-index: 100;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #666;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}

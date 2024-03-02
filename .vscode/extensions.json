@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "antfu.unocss",
+    "steoates.autoimport",
+    "formulahendry.auto-rename-tag",
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify",
+    "visualstudioexptteam.vscodeintellicode",
+    "lokalise.i18n-ally",
+    "xabikos.javascriptsnippets",
+    "syler.sass-indented",
+    "sibiraj-s.vscode-scss-formatter",
+    "vue.volar",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint"
+  ]
+}

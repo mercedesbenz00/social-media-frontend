@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="94pt" height="94pt" viewBox="0 0 94 94">
+<defs>
+<mask id="mask_0">
+<g>
+<clipPath id="clip_1">
+<path d="M18 26H76V68H18Z"/>
+</clipPath>
+<g clip-path="url(#clip_1)">
+<mask id="mask_2">
+<g transform="matrix(.99999997,0,0,.99999997,0,0)">
+<image id="image_3" width="94" height="94" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAF4AAABeCAAAAACPufyyAAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAPklEQVR4nO3MMQ0AIAwAsF244MEA/p3ghlkgewikFdAIAACesHbR
+1Ov1er1er9fr9Xq9/vu+j6J21AMAcF0C64whQhotxGgAAAAASUVORK5CYII="/>
+</g>
+</mask>
+<g mask="url(#mask_2)">
+<g transform="matrix(.99999997,0,0,.99999997,0,0)">
+<image id="image_4" width="94" height="94" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAF4AAABeCAIAAAAlsDQ5AAAACXBIWXMAAA7EAAAO
+xAGVKw4bAAAAgUlEQVR4nO3QwQmAMBQFwYAN20PulubNVkRUiE2IvC8zbAXbGgAA
+AAAAAEBh41rGPdXonK2xxhprrLEmMWusscYaa6zJzBprrLHGGmsys8Yaa6yxxprM
+rLHGGmussSYza6yxxhprrMnMGmusseaPa/Z1HL1GW/90DQAAAAAAAMDLHkkSOZHn
+0/LxAAAAAElFTkSuQmCC"/>
+</g>
+</g>
+</g>
+</g>
+"/>
+</mask>
+<clipPath id="clip_5">
+<path d="M18 26H76V68H18Z"/>
+</clipPath>
+<clipPath id="clip_6">
+<path d="M0 0H94V94H0Z"/>
+</clipPath>
+</defs>
+<g>
+<path d="M93.668 47C93.668 72.773 72.773 93.668 47 93.668 21.227 93.668 .332 72.773 .332 47 .332 21.227 21.227 .332 47 .332 72.773 .332 93.668 21.227 93.668 47ZM93.668 47" fill="#f8f8fd" fill-rule="evenodd"/>
+<g mask="url(#mask_0)">
+<g>
+<g clip-path="url(#clip_5)">
+<g clip-path="url(#clip_6)">
+<path d="M67.434 67.117H25.902C21.625 67.117 18.152 63.379 18.152 58.77V34.344C18.152 29.734 21.625 26 25.902 26H67.434C71.715 26 75.184 29.734 75.184 34.344V58.77C75.184 63.379 71.715 67.117 67.434 67.117" fill="#ccccda" fill-rule="evenodd"/>
+</g>
+</g>
+</g>
+</g>
+<path d="M23.547 57.879 30.762 47.535C31.938 45.844 34.156 45.355 35.891 46.402L40.629 49.258C43.078 50.734 46.199 50.113 47.949 47.801L53.422 40.574C54.809 38.746 57.5 38.844 58.762 40.77L70 57.941C70.754 59.094 70.43 60.645 69.273 61.402 68.867 61.668 68.391 61.809 67.906 61.809H25.598C24.219 61.809 23.098 60.691 23.098 59.309 23.098 58.797 23.254 58.297 23.547 57.879ZM23.547 57.879" fill="#f8f8fd" fill-rule="evenodd"/>
+<path d="M47.332 36.609C47.332 39.539 44.957 41.914 42.027 41.914 39.098 41.914 36.723 39.539 36.723 36.609 36.723 33.68 39.098 31.305 42.027 31.305 44.957 31.305 47.332 33.68 47.332 36.609" fill="#f8f8fd" fill-rule="evenodd"/>
+</g>
+</svg>
